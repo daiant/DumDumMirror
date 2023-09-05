@@ -5,7 +5,6 @@ import { date2iso, getHourlyIndex, getWeather } from './weather.lib';
 
 export default function Weather() {
   const [weather, setWeather] = useState<WeatherInterface | undefined>(undefined);
-  const [hourly_index, setHourlyIndex] = useState(-1)
 
   useEffect(() => {
     updateData();
@@ -16,7 +15,6 @@ export default function Weather() {
 
   useEffect(() => {
     if (!weather) return;
-    setHourlyIndex(getHourlyIndex(weather) || -1);
   }, [weather]);
 
   function updateData() {
@@ -26,5 +24,5 @@ export default function Weather() {
     });
   }
 
-  return <>{weather?.hourly.temperature_2m[hourly_index]} gradiños</>
+  return <>{weather?.current_weather.temperature} gradiños</>
 }
