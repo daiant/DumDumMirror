@@ -1,6 +1,7 @@
 .background {
-  width: min(100%, 600px);
+  width: min(100%, 900px);
   background-color: #454c5a;
+  margin-block-start: 32px;
 }
 
 .background img {
