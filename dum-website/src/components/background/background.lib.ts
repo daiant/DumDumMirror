@@ -1,0 +1,1 @@
+export const API_URL = 'https://api.unsplash.com/photos/random?client_id=S7p0_yLIqOpxg4kvo84hEM00HxEPsG-LLIE6jS9kn3o';
