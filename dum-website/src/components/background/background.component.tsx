@@ -10,5 +10,7 @@ export default function Background() {
       setImg(data.urls.full);
     });
   }, []);
-  return <img src={img} className={styles.background} ></img>
+  return <div className={styles.background}>
+    {Boolean(img) && <img src={img}></img>}
+  </div>
 }

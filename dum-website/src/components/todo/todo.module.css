@@ -1,7 +1,7 @@
 .list {
   position: relative;
   flex-grow: 1;
-  margin-block: 32px;
+  margin-block: 32px 0;
 }
 
 .list ul {

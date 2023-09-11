@@ -22,7 +22,7 @@ main {
   display: grid;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 32px;
+  padding: 32px 32px 64px 32px;
 }
 
 .row {
@@ -40,4 +40,5 @@ main {
   justify-content: space-between;
   align-items: flex-end;
   align-self: end;
+
 }

@@ -1,5 +1,11 @@
 .background {
+  width: min(100%, 600px);
+  background-color: #454c5a;
+}
+
+.background img {
   object-fit: cover;
-  max-width: min(100%, 600px);
+  width: 100%;
   aspect-ratio: 16 / 9;
+  display: block;
 }
