@@ -1,7 +1,6 @@
-import React from 'react';
 import { useEffect, useState } from "react";
 import { WeatherInterface } from './weather.types';
-import { date2iso, getHourlyIndex, getWeather } from './weather.lib';
+import { getWeather } from './weather.lib';
 
 export default function Weather() {
   const [weather, setWeather] = useState<WeatherInterface | undefined>(undefined);

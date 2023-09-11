@@ -1,6 +1,7 @@
 import React from "react";
 import { addTODOItem, getTODOItems, removeTODOItem } from "./todo.utils";
 import { TODOItem } from "./todo.types";
+import styles from './todo.module.css';
 
 export default function TODOList() {
   const input = React.useRef<HTMLInputElement>(null);
@@ -37,14 +38,18 @@ export default function TODOList() {
     if (!event || !['Enter', 'Space'].includes(event.code)) return;
     handleRemove(id);
   }
-  return <ul>
-    {getActiveItems().map(item => (
-      <li key={item.id}>
-        {item.name}
-        <button tabIndex={1} onClick={() => handleRemove(item.id)} onKeyDown={(event) => handleKeyRemove(item.id, event)}>del</button>
-      </li>
-    ))}
-    <input type="text" placeholder="add..." ref={input} onKeyDown={handleKey} />
-    <button onClick={handleAdd}>Add new</button>
-  </ul>
+  return <div className={styles.list}>
+    <ul>
+      {getActiveItems().map(item => (
+        <li key={item.id}>
+          {item.name}
+          <button tabIndex={1} onClick={() => handleRemove(item.id)} onKeyDown={(event) => handleKeyRemove(item.id, event)}>del</button>
+        </li>
+      ))}
+    </ul>
+    <div className={styles.actions}>
+      <input type="text" placeholder="add..." ref={input} onKeyDown={handleKey} />
+      <button onClick={handleAdd}>Add new</button>
+    </div>
+  </div>
 }

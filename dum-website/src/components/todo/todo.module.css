@@ -1,0 +1,37 @@
+.list {
+  position: relative;
+  flex-grow: 1;
+  margin-block: 32px;
+}
+
+.list ul {
+  padding-left: 0;
+  list-style: none;
+  max-width: 600px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin: 0;
+  padding-block-end: 32px;
+  padding-inline-end: 4px;
+}
+
+.list li {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  margin-block-start: 16px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: min(100%, 600px);
+}
+
+.actions input {
+  flex-grow: 1;
+}

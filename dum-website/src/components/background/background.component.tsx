@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { API_URL } from "./background.lib";
+import styles from './background.module.css';
 
 export default function Background() {
   const [img, setImg] = React.useState('')
@@ -9,5 +10,5 @@ export default function Background() {
       setImg(data.urls.full);
     });
   }, []);
-  return <img src={img} width={600} height={300} style={{ objectFit: 'cover' }} ></img>
+  return <img src={img} className={styles.background} ></img>
 }
